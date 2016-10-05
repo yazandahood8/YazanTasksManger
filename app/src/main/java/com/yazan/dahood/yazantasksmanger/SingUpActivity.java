@@ -15,6 +15,7 @@ public class SingUpActivity extends AppCompatActivity {
     private Button btnSignup;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
