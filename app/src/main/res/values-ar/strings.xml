@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مدير المهام</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="help">مساعدة</string>
+    <string name="signup">تسجيل</string>
+    <string name="signin">تسجيل  الدخول</string>
+    <string name="password">كلمة السر</string>
+    <string name="repassword">اعاده كلمة السر</string>
+    <string name="fullname">الاسم الكامل</string>
+    <string name="add">اضافة</string>
+    <string name="addnewtask">اضافة مهمة</string>
+    <string name="save">حفظ</string>
+    <string name="phone">هاتف</string>
+    <string name="text">النص</string>
+    <string name="location">الموقع</string>
+    <string name="tasktext">مهمة نصية</string>
+    <string name="contact">جهة الاتصال</string>
+    <string name="title_activity_tasks_lists">قائمة المهمات</string>
+</resources>

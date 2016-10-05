@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">YazanTasksManger</string>
+    <string name="title_activity_tasks_lists">TasksListsActivity</string>
+    <string name="email">email</string>
+    <string name="signin">Sign in</string>
+    <string name="signup">Sign Up</string>
+    <string name="help">Help</string>
+    <string name="password">Password</string>
+    <string name="fullname">Full Name</string>
+    <string name="repassword">re-password</string>
+    <string name="add">add</string>
+    <string name="addnewtask">add new task</string>
+    <string name="contact">contact</string>
+    <string name="save">save</string>
+    <string name="phone">phone</string>
+    <string name="text">text</string>
+    <string name="location">Location</string>
+    <string name="tasktext">Task Text</string>
+</resources>
