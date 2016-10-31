@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentStart="true">
 
         <EditText
             android:layout_width="match_parent"
@@ -40,25 +40,28 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:text="@string/signin"
                 android:id="@+id/btnSignIn"
-                android:layout_weight="1"
-                android:text="@string/signin" />
+                android:layout_weight="0.22"
+                android:hint="sign up" />
 
             <Button
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/signup"
                 android:id="@+id/btnSignUp"
-                android:layout_weight="1"
-                android:text="@string/signup" />
+                android:layout_weight="0.10" />
+
         </LinearLayout>
 
         <Button
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
+            android:layout_width="114dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnhelp"
             android:text="@string/help"
-            android:layout_gravity="center_horizontal" />
+            android:id="@+id/btnNewAcount"
+            android:hint="Help"
+            android:onClick="onClick" />
 
     </LinearLayout>
 </RelativeLayout>

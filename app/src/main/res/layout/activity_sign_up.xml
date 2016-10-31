@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.yazan.dahood.yazantasksmanger.SingUpActivity">
+    tools:context=".SignUpActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/etEmail"
+            android:id="@+id/etemail"
             android:hint="@string/email" />
 
         <EditText
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/etFullName"
+            android:id="@+id/etFulName"
             android:hint="@string/fullname" />
 
         <EditText
@@ -37,24 +37,21 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/etPassw1"
+            android:id="@+id/etpassw1"
             android:hint="@string/password" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/etPassw2"
             android:hint="@string/repassword" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSignUp"
-            android:text="@string/signup"
-            android:onClick="onClick" />
-
+            android:text="@string/save"
+            android:id="@+id/btnSignUp" />
     </LinearLayout>
-
 </RelativeLayout>

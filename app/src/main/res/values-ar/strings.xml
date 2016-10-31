@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">مدير المهام</string>
+    <string name="app_name">YazanTasksManger</string>
     <string name="email">البريد الالكتروني</string>
     <string name="help">مساعدة</string>
     <string name="signup">تسجيل</string>
@@ -16,5 +16,4 @@
     <string name="location">الموقع</string>
     <string name="tasktext">مهمة نصية</string>
     <string name="contact">جهة الاتصال</string>
-    <string name="title_activity_tasks_lists">قائمة المهمات</string>
 </resources>

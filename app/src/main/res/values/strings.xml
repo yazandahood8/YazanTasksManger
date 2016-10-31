@@ -16,4 +16,5 @@
     <string name="text">text</string>
     <string name="location">Location</string>
     <string name="tasktext">Task Text</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

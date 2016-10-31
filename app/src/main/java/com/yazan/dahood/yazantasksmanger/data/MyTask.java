@@ -15,7 +15,7 @@ public class MyTask
      * enwaan
      */
     private String title;
-    private int prioroty;
+    private float prioroty;
     private Date when;
     private String address;
     private String phone;
@@ -54,11 +54,11 @@ public class MyTask
         this.title = title;
     }
 
-    public int getPrioroty() {
+    public float getPrioroty() {
         return prioroty;
     }
 
-    public void setPrioroty(int prioroty) {
+    public void setPrioroty(float prioroty) {
         this.prioroty = prioroty;
     }
 
