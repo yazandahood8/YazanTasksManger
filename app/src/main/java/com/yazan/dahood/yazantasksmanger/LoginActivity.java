@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
     private EditText etEmail;
     private EditText etPassw;
-    private Button btnSignUp,btnNewAcount,btnSignIn;
+    private Button btnSignUp,btnHelp,btnSignIn;
     private FirebaseAuth auth;
 
     @Override
@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         etEmail=(EditText)findViewById(R.id.etemail);
         etPassw=(EditText)findViewById(R.id.etpassword);
         btnSignIn=(Button) findViewById(R.id.btnSignIn);
-        btnNewAcount=(Button)findViewById(R.id.btnNewAcount);
+        btnHelp=(Button)findViewById(R.id.btnHelp);
         btnSignUp=(Button)findViewById(R.id.btnSignUp);
         auth=FirebaseAuth.getInstance();
 
@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
-        btnNewAcount.setOnClickListener(new View.OnClickListener() {
+        btnHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

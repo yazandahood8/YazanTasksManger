@@ -59,7 +59,7 @@
             android:layout_width="114dp"
             android:layout_height="wrap_content"
             android:text="@string/help"
-            android:id="@+id/btnNewAcount"
+            android:id="@+id/btnHelp"
             android:hint="Help"
             android:onClick="onClick" />
 
