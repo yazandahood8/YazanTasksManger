@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "658336478415",
+    "firebase_url": "https://yazantasksmanger.firebaseio.com",
+    "project_id": "yazantasksmanger",
+    "storage_bucket": "yazantasksmanger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658336478415:android:cb8e7d1af0658ee2",
+        "android_client_info": {
+          "package_name": "com.yazan.dahood.yazantasksmanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658336478415-ipvhh04v8osonujik8ilkus21eitvjhu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yazan.dahood.yazantasksmanger",
+            "certificate_hash": "207C202ECE9FFC5136A38028C1532ACC3AB7EAF8"
+          }
+        },
+        {
+          "client_id": "658336478415-46db2i1obb1vtpg3tgdkblkhmgbfk2oo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOSm40kxunX-ojgIqdfMorKZgsU5N8lBc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658336478415-46db2i1obb1vtpg3tgdkblkhmgbfk2oo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
