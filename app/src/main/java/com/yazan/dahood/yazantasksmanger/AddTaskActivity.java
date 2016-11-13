@@ -66,6 +66,8 @@ public class AddTaskActivity extends AppCompatActivity {
             isok = false;
         }
         if (isok==true){
+            Intent i = new Intent(AddTaskActivity.this, TasksListsActivity.class);
+            startActivity(i);
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
             Date date = Calendar.getInstance().getTime();
             MyTask t = new MyTask();
@@ -111,6 +113,16 @@ public class AddTaskActivity extends AppCompatActivity {
                 dataHandler();
 
 
+
+
+            }
+
+        });
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(AddTaskActivity.this, MapsActivity.class);
+                startActivity(i);
 
 
             }
