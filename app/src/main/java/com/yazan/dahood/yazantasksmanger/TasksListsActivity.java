@@ -110,6 +110,7 @@ public class TasksListsActivity extends AppCompatActivity {
                 {
                     //4.
                     MyTask myTask=ds.getValue(MyTask.class);
+                    myTask.setId(ds.getKey());
                     //4.
                     //Add myTask to Adatpter
                     adapterTask.add(myTask);

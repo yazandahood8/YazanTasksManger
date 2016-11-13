@@ -27,6 +27,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        if (FirebaseAuth.getInstance().getCurrentUser()!=null){
+            Intent i = new Intent(LoginActivity.this, TasksListsActivity.class);
+            startActivity(i);
+            finish();
+
+        }
 
         etEmail=(EditText)findViewById(R.id.etemail);
         etPassw=(EditText)findViewById(R.id.etpassword);

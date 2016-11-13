@@ -8,7 +8,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.yazan.dahood.yazantasksmanger.R;
 import com.yazan.dahood.yazantasksmanger.data.MyTask;
 
@@ -16,9 +21,12 @@ import com.yazan.dahood.yazantasksmanger.data.MyTask;
  * Created by user on 10/30/2016.
  */
 public class MyAdapterTask extends ArrayAdapter<MyTask>  {
+    private DatabaseReference reference;
 
     public MyAdapterTask(Context context, int resource) {
         super(context, resource);
+        String email= FirebaseAuth.getInstance().getCurrentUser().getEmail().replace(".","_");
+        reference= FirebaseDatabase.getInstance().getReference(email).child("MyTasks");
     }
 
     @Override
@@ -29,6 +37,8 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
         TextView tvPhone=(TextView)convertView.findViewById(R.id.tvItmPhone);
         RatingBar rate=(RatingBar)convertView.findViewById(R.id.rtbItmPriority);
         ImageButton btnCall=(ImageButton)convertView.findViewById(R.id.btnItmCall);
+        // del 01
+        ImageButton btnDel=(ImageButton)convertView.findViewById(R.id.btnDel);
         final MyTask myTask=getItem(position);
         tvTitle.setText(myTask.getTitle());
         tvPhone.setText(myTask.getPhone());
@@ -38,6 +48,28 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
             @Override
             public void onClick(View v) {
                 //make call
+            }
+        });
+        //del 02
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //delete from the firebase server
+                reference.child(myTask.getId()).removeValue(new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                        if (databaseError==null)//deleted
+                        {
+                            Toast.makeText(getContext(),"Deleted",Toast.LENGTH_LONG).show();
+                            //delete from this adapter
+                            remove(myTask);
+                            //to update the listview
+                            setNotifyOnChange(true);
+                        }
+
+                    }
+                });
+
             }
         });
         return convertView;
