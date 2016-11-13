@@ -1,6 +1,8 @@
 package com.yazan.dahood.yazantasksmanger.data;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,21 +56,51 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //delete from the firebase server
-                reference.child(myTask.getId()).removeValue(new DatabaseReference.CompletionListener() {
-                    @Override
-                    public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
-                        if (databaseError==null)//deleted
-                        {
-                            Toast.makeText(getContext(),"Deleted",Toast.LENGTH_LONG).show();
-                            //delete from this adapter
-                            remove(myTask);
-                            //to update the listview
-                            setNotifyOnChange(true);
-                        }
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+
+
+
+                // set title
+                // alertDialogBuilder.setTitle("Your Title");
+
+                // set dialog message
+                alertDialogBuilder.setMessage("Do you want to delete this task?").setCancelable(false).setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface dialog,int id) {
+                        //delete from the firebase server
+                        reference.child(myTask.getId()).removeValue(new DatabaseReference.CompletionListener() {
+                            @Override
+                            public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                                if (databaseError==null)//deleted
+                                {
+                                    Toast.makeText(getContext(),"Deleted",Toast.LENGTH_LONG).show();
+                                    //delete from this adapter
+                                    remove(myTask);
+                                    //to update the listview
+                                    setNotifyOnChange(true);
+                                }
+
+                            }
+                        });
+
+
 
                     }
-                });
+                })
+                        .setNegativeButton("No",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, just close
+                                // the dialog box and do nothing
+                                dialog.cancel();
+                            }
+                        });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+
 
             }
         });

@@ -59,8 +59,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/imageButton"
-                android:src="@mipmap/ic_my_plus"
-                android:onClick="onClick" />
+                android:onClick="onClick@drawable/btn_default_material"
+                android:background="@android:drawable/ic_menu_mapmode" />
 
         </LinearLayout>
 
