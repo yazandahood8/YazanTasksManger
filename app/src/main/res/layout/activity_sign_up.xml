@@ -29,24 +29,24 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/etFulName"
-            android:hint="@string/fullname" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
             android:id="@+id/etpassw1"
             android:hint="@string/password" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etPassw2"
             android:hint="@string/repassword" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etFulName"
+            android:hint="@string/fullname" />
 
         <Button
             android:layout_width="match_parent"

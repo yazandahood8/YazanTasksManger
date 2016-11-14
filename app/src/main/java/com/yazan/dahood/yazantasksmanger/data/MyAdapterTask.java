@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
         super(context, resource);
         String email= FirebaseAuth.getInstance().getCurrentUser().getEmail().replace(".","_");
         reference= FirebaseDatabase.getInstance().getReference(email).child("MyTasks");
+
     }
 
     @Override
@@ -39,6 +41,7 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
         TextView tvPhone=(TextView)convertView.findViewById(R.id.tvItmPhone);
         RatingBar rate=(RatingBar)convertView.findViewById(R.id.rtbItmPriority);
         ImageButton btnCall=(ImageButton)convertView.findViewById(R.id.btnItmCall);
+
         // del 01
         ImageButton btnDel=(ImageButton)convertView.findViewById(R.id.btnDel);
         final MyTask myTask=getItem(position);
@@ -106,4 +109,6 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
         });
         return convertView;
     }
+
+
 }
