@@ -18,13 +18,18 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.yazan.dahood.yazantasksmanger.R;
+import com.yazan.dahood.yazantasksmanger.TasksListsActivity;
 import com.yazan.dahood.yazantasksmanger.data.MyTask;
+
+import static android.R.id.button2;
 
 /**
  * Created by user on 10/30/2016.
  */
 public class MyAdapterTask extends ArrayAdapter<MyTask>  {
     private DatabaseReference reference;
+
+
 
     public MyAdapterTask(Context context, int resource) {
         super(context, resource);
@@ -55,6 +60,9 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
                 //make call
             }
         });
+
+                //make call
+
         //del 02
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +117,7 @@ public class MyAdapterTask extends ArrayAdapter<MyTask>  {
         });
         return convertView;
     }
+
 
 
 }

@@ -19,10 +19,11 @@ public class MyTask
     private Date when;
     private String address;
     private String phone;
+    private String grade;
 
 
 
-    public MyTask(String title, int prioroty, Date when, String address, String phone, String id) {
+    public MyTask(String title, int prioroty, Date when, String address, String phone, String id,String grade) {
 
         this.title = title;
         this.prioroty = prioroty;
@@ -37,6 +38,13 @@ public class MyTask
     public MyTask() {
 
     }
+    public String getGrade() {
+        return grade;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
 
     public String getId() {
         return id;
@@ -45,6 +53,7 @@ public class MyTask
     public void setId(String id) {
         this.id = id;
     }
+
 
     public String getTitle() {
         return title;

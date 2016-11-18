@@ -1,8 +1,10 @@
 package com.yazan.dahood.yazantasksmanger;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.provider.ContactsContract;
 import android.renderscript.Sampler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +28,7 @@ public class AddTaskActivity extends AppCompatActivity {
     private Button btnContacts, btnSave;
     private ImageButton imageButton;
     private RatingBar ratingBar;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,11 +96,16 @@ public class AddTaskActivity extends AppCompatActivity {
 
                         databaseError.toException().printStackTrace();
                     }
+
                 }
+
             });
 
         }
-        }
+
+
+
+    }
 
 
     private void evenHandler() {
@@ -126,6 +134,16 @@ public class AddTaskActivity extends AppCompatActivity {
 
 
             }
+
+        });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dataHandler();
+
+            }
+
+
 
         });
     }
